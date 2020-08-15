@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "376576737927",
+    "firebase_url": "https://mushroomrecognizer.firebaseio.com",
+    "project_id": "mushroomrecognizer",
+    "storage_bucket": "mushroomrecognizer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376576737927:android:a790fc9373467ed3d0ae22",
+        "android_client_info": {
+          "package_name": "com.stepin.mushroom_recognizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376576737927-bbnqsa8lg7q80vkpfnurc7j5bum6rpnn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stepin.mushroom_recognizer",
+            "certificate_hash": "c2acd61d3bf462e8233ee1a2b3fad40b3706f441"
+          }
+        },
+        {
+          "client_id": "376576737927-npp7nqos175o1mbqpqdi3crhdmtodsla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByjX8Ij6NcelfXbgMhLrIID5QJi-tRSZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376576737927-npp7nqos175o1mbqpqdi3crhdmtodsla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
