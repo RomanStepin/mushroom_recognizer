@@ -6,20 +6,6 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.3"
-        android:background="@drawable/fonelki"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="15dp"
@@ -37,19 +23,19 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Название параметра"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Описание параметра"
-            android:textAlignment="center"
+            android:textAlignment="inherit"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -82,12 +68,13 @@
             android:layout_weight="0"
             android:orientation="horizontal">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_last"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Назад" />
+                android:text="Назад"
+                app:icon="@drawable/ic_back" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -95,17 +82,19 @@
                 android:layout_weight="1"
                 android:orientation="vertical"></LinearLayout>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Далее" />
+                android:text="Далее"
+                app:icon="@drawable/ic_forward" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="80dp"
+            android:gravity="top"
             android:orientation="horizontal">
 
             <com.google.android.gms.ads.AdView
@@ -114,6 +103,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                android:layout_gravity="top"
                 app:adSize="BANNER"
                 app:adUnitId="@string/AdView_id">
 

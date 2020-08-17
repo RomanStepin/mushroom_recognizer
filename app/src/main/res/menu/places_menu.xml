@@ -21,5 +21,6 @@
         android:id="@+id/places_menu_item1"
         android:icon="@android:drawable/ic_input_add"
         android:title="Новое место"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:visible="false"/>
 </menu>

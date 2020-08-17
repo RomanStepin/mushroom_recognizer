@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -210,5 +211,24 @@ public class activity_map extends AppCompatActivity implements OnMapReadyCallbac
         coordination_x_add = savedInstanceState.getDouble("coordination_x_add");
         coordination_y_add = savedInstanceState.getDouble("coordination_y_add");
         is_addble = savedInstanceState.getBoolean("is_addble");
+    }
+    public void addClick(View view)
+    {
+        if (cursor_places.getCount() > MaxPlaces)
+            Toast.makeText(this, "Слишком много мест. Удалите уже созданные.", Toast.LENGTH_LONG).show();
+        else {
+            if (is_addble) {
+                intent = new Intent(this, activity_place_add.class);
+                intent.putExtra("_id", 0);
+                intent.putExtra("X", marker.getPosition().latitude);
+                intent.putExtra("Y", marker.getPosition().longitude);
+                intent.putExtra("description", "");
+                intent.putExtra("button_text", "Добавить место");
+                intent.putExtra("if_change_coordinates", false);
+                intent.putExtra("is_for_map", true);
+                startActivityForResult(intent, 1);
+            } else
+                Toast.makeText(this, "Нажмите на карте чтобы поставить ваш указатель", Toast.LENGTH_LONG).show();
+        }
     }
 }

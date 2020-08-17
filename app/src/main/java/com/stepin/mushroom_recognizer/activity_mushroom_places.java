@@ -255,6 +255,23 @@ public class activity_mushroom_places extends AppCompatActivity {
         }
     }
 
+    public void addClick(View view)
+    {
+        if (cursor_places.getCount() > MaxPlaces)
+            Toast.makeText(this, "Слишком много мест. Удалите уже созданные.", Toast.LENGTH_LONG).show();
+        else {
+            intent = new Intent(this, activity_place_add.class);
+            intent.putExtra("_id", 0);
+            intent.putExtra("X", 0.0);
+            intent.putExtra("Y", 0.0);
+            intent.putExtra("description", "");
+            intent.putExtra("button_text", "Добавить место");
+            intent.putExtra("if_change_coordinates", true);
+            intent.putExtra("is_for_map", false);
+            startActivityForResult(intent, 1);
+        }
+    }
+
 }
 
 class MySimpleCursorAdapter extends SimpleCursorAdapter

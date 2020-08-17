@@ -7,57 +7,65 @@
     android:orientation="vertical"
     tools:context=".activity_place_add">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Описание места"
-        android:textAlignment="center"
-        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editText_place_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:gravity="start|top"
         android:hint="Введите сюда описание"
         android:inputType="textMultiLine"
-        android:maxLength="100" />
+        android:maxLength="100"
+        android:textColorHint="@color/material_on_background_disabled"
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_determinate_place_coordinates"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:text="Определить координаты"
             android:visibility="visible"
+            app:icon="@drawable/ic_location"
+            app:iconGravity="start"
             tools:visibility="visible" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_create_place"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_weight="1"
-            android:text="Добавить" />
+            android:text="Добавить"
+            android:textColor="@color/design_default_color_background"
+            app:icon="@drawable/ic_done" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView_place_coordinates_X"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp" />
 
     <TextView
         android:id="@+id/textView_place_coordinates_Y"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp" />
 
 </LinearLayout>

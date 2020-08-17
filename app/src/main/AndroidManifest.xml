@@ -61,23 +61,28 @@
 
         <activity
             android:name=".activity_place_add"
-            android:label="Добавление грибного места"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert">
+            android:label="Новое место"
+            android:theme="@style/MyMaterialThemeDialog" >
 
         </activity>
         <activity
             android:name=".activity_mushroom_places"
             android:label="Ваши места" />
-        <activity android:name=".activity_description" />
+        <activity android:name=".activity_description"
+            android:theme="@style/MyMaterialTheme">
+        </activity>
         <activity
             android:name=".activity_parameter_selection"
-            android:label="Выберите" />
+            android:label="Выберите"
+            android:theme="@style/MyMaterialTheme"/>
         <activity
             android:name=".activity_result"
-            android:label="Результаты" />
+            android:label="Результаты"
+            android:theme="@style/MyMaterialTheme"/>
         <activity
             android:name=".MainActivity"
-            android:label="Помощник грибника">
+            android:label="Помощник грибника"
+            android:theme="@style/MyMaterialTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
