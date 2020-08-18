@@ -179,22 +179,24 @@ public class activity_map extends AppCompatActivity implements OnMapReadyCallbac
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        String description = data.getStringExtra("description");
-        double X = data.getDoubleExtra("X", 0);
-        double Y = data.getDoubleExtra("Y", 0);
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("description", description);
-        contentValues.put("coordinate_x", X);
-        contentValues.put("coordinate_y", Y);
-        sqLiteDatabase_places.insert("mushroom_places", null, contentValues);
-        Cursor cursor_places = sqLiteDatabase_places.query("mushroom_places", null, null, null, null, null, null);
-        cursor_places.moveToFirst();
-        try {
-            marker.remove();
-            markerOptions = null;
-        } catch (NullPointerException e){}
-
-        is_addble = false;
+        if(resultCode == 1) {
+            String description = data.getStringExtra("description");
+            double X = data.getDoubleExtra("X", 0);
+            double Y = data.getDoubleExtra("Y", 0);
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("description", description);
+            contentValues.put("coordinate_x", X);
+            contentValues.put("coordinate_y", Y);
+            sqLiteDatabase_places.insert("mushroom_places", null, contentValues);
+            Cursor cursor_places = sqLiteDatabase_places.query("mushroom_places", null, null, null, null, null, null);
+            cursor_places.moveToFirst();
+            try {
+                marker.remove();
+                markerOptions = null;
+            } catch (NullPointerException e) {
+            }
+            is_addble = false;
+        }
     }
 
     @Override

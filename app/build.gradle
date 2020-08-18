@@ -17,8 +17,8 @@ android {
         applicationId "com.stepin.mushroom_recognizer"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 8
-        versionName "1.8"
+        versionCode 9
+        versionName "1.8.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
